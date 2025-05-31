@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- Left: Images -->
+    <div class="md:col-span-2 grid grid-cols-2 md:grid-cols-5 gap-4">
+      <img src="https://i5.walmartimages.com/seo/2025-Apple-11-inch-iPad-A16-Built-for-Apple-Intelligence-Wi-Fi-128GB-Silver_b330c294-bd31-4cfa-8696-2aaab09de3d6.047e2ef42438c9ee8228f2fdec51f998.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="Image 1" class="rounded-xl shadow" />
+      <img src="https://i5.walmartimages.com/seo/2025-Apple-11-inch-iPad-A16-Built-for-Apple-Intelligence-Wi-Fi-128GB-Silver_b330c294-bd31-4cfa-8696-2aaab09de3d6.047e2ef42438c9ee8228f2fdec51f998.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF" alt="Image 2" class="rounded-xl shadow" />
+      <img src="https://i5.walmartimages.com/asr/3f05ad79-5a93-4136-ab6a-4575471ae479.a579b021fba9114692cd073a316f99a2.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="Image 3" class="rounded-xl shadow" />
+      <img src="https://i5.walmartimages.com/asr/4ff0d424-afa9-4d40-9882-d2b4801182fd.fdee811792c6e77c078fd4d9d247f4f9.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="Image 4" class="rounded-xl shadow" />
+      <img src="https://i5.walmartimages.com/asr/edd7e1ef-a3c4-4e69-b05d-64e13284eaa1.8beb93ad0dd02fe29b975022e48b469d.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="Image 5" class="rounded-xl shadow" />
+    </div>
+
+    <!-- Right: Slip -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col justify-between h-full">
+      <div>
+        <h2 class="text-xl font-bold mb-2">Price: <span class="text-green-600">$290.78</span></h2>
+        <p class="text-gray-600 mb-4">Delivery: <strong>Free</strong></p>
+      </div>
+
+      <div>
+        <!-- Order Now button opens delivery.html -->
+        <a href="delivary.html">
+          <button class="bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition duration-300 w-full">
+            Order Now
+          </button>
+        </a>
+
+        <!-- Instructions -->
+        <div class="mt-6 bg-gray-100 p-4 rounded-xl text-sm text-gray-700">
+          <h3 class="font-semibold mb-2">How to place your order:</h3>
+          <ol class="list-decimal pl-5 space-y-1">
+            <li>Press the <strong>Order Now</strong> button.</li>
+            <li>Fill in the delivery form on the next page.</li>
+            <li>Press the <strong>Submit Order</strong> button.</li>
+            <li>Note:Make a deposit of $5  your order.</li>
+            <li>Complete payment on delivery.</li>
+
+
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

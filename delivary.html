@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delivery Form</title>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("wkI_zzv-LS-eRPwAA"); // Replace with your EmailJS public key
+    })();
+  </script>
+
+  <!-- CSS Styling -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 30px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 30px;
+      max-width: 700px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e3a8a;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 15px;
+      display: block;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #f8fafc;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .radio-group {
+      margin-top: 10px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px;
+      margin-top: 25px;
+      width: 100%;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="deliveryForm">
+    <h2>Customer Delivery Form</h2>
+
+    <label for="fullName">Full Name:</label>
+    <input type="text" name="fullName" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" name="phone" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" name="email" required>
+
+    <label for="address">Street Address:</label>
+    <input type="text" name="address" required>
+
+    <label for="city">City:</label>
+    <input type="text" name="city" required>
+
+    <label for="state">State:</label>
+    <input type="text" name="state" required>
+
+    <label for="zip">ZIP Code:</label>
+    <input type="text" name="zip" required>
+
+    <label for="country">Country:</label>
+    <input type="text" name="country" required>
+
+    <label for="deliveryDate">Preferred Delivery Date:</label>
+    <input type="date" name="deliveryDate">
+
+    <label for="deliveryTime">Preferred Delivery Time:</label>
+    <select name="deliveryTime">
+      <option value="any">Any</option>
+      <option value="morning">Morning</option>
+      <option value="afternoon">Afternoon</option>
+      <option value="evening">Evening</option>
+    </select>
+
+    <label for="instructions">Special Instructions:</label>
+    <textarea name="instructions" rows="3"></textarea>
+
+    <label for="orderNumber">Order Number:</label>
+    <input type="text" name="orderNumber" required>
+
+    <label for="items">Items Ordered:</label>
+    <textarea name="items" rows="4" required></textarea>
+
+    <label for="payment">Payment Status:</label>
+    <select name="payment">
+      <option value="paid">Paid</option>
+      <option value="cod">Cash on Delivery</option>
+    </select>
+
+    <label>Shipping Method:</label>
+    <div class="radio-group">
+      <input type="radio" name="shipping" value="standard" id="standard" checked>
+      <label for="standard">Standard</label>
+
+      <input type="radio" name="shipping" value="express" id="express">
+      <label for="express">Express</label>
+
+      <input type="radio" name="shipping" value="sameDay" id="sameDay">
+      <label for="sameDay">Same-Day</label>
+    </div>
+
+    <button type="submit">Submit Order</button>
+  </form>
+
+  <script>
+  document.getElementById('deliveryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_xuw4eys', 'template_c0462aw', this)
+      .then(function(response) {
+        // Redirect to thank-you page
+        window.location.href = "deposit.html"; // Replace with your actual page
+      }, function(error) {
+        alert('Failed to send order. Please try again.');
+      });
+  });
+</script>
+</body>
+</html>

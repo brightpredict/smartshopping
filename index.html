@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deriv shoppers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      line-height: 1.6;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    .hero {
+      background: #222;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    .deals-gallery, .categories, .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .deals-gallery img, .card img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .deals-gallery img:hover, .card img:hover {
+      transform: scale(1.05);
+    }
+    .section {
+      padding: 2rem;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      padding: 1rem;
+    }
+    .card a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .price {
+      margin: 0.5rem 0;
+    }
+    .price del {
+      color: #888;
+      margin-right: 0.5rem;
+    }
+    .price strong {
+      color: #d00;
+    }
+    .card button {
+      margin-top: 0.5rem;
+      background: #28a745;
+    }
+    #cart-message {
+      text-align: center;
+      padding: 1rem;
+      background-color: #d4edda;
+      color: #155724;
+      display: none;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-section {
+      flex: 1 1 250px;
+      margin: 20px;
+    }
+
+    .footer-section h4 {
+      color: #ff9900;
+      margin-bottom: 15px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-section ul li a:hover {
+      color: #fff;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 70%;
+      border: none;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .newsletter button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #ff9900;
+      color: white;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background-color: #e68a00;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Online Store</h1>
+    <nav>
+      <a href="#top-deals">Top Deals</a>
+      <a href="#new-arrivals">New Arrivals</a>
+      <a href="#categories">Categories</a>
+    </nav>
+  </header>
+
+  <div id="cart-message">Item added to cart!</div>
+
+  <section class="section" id="top-deals">
+    <h2>Top Deals</h2>
+      <div class="products">
+      <div class="card">
+        <a href="place1.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Pure-Balance-Lamb-Fava-Bean-Recipe-Dry-Dog-Food-Grain-Free-24-lbs_2b4b7262-4951-4273-94ea-2452b21bab1a.e731a9a44c17700171e085ea3d6dc3be.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"></a>
+        <p class="price"><del>$36.40</del><strong>$26.10</strong></p>
+        <a href="place1.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="page2.html" target="_blank"><img src="https://i5.walmartimages.com/seo/edx-Dog-Grooming-Kit-2-5L-Pet-Hair-Grooming-Vacuum-5-In-1-Electric-Clippers-Cleaning-Sets-For-Dog-Cat-Other-Animals_9c57ee37-92a9-4d95-9b15-f9550eeef838.7ff4752202b065557a9027d58496e29c.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 2"></a>
+        <p class="price"><del>$99.99</del><strong>$35.54</strong></p>
+        <a href="page2.html"><button class="order">Oder now</button></a>
+      </div>
+      <div class="card">
+        <a href="place3.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Homfa-Dog-Crate-Furniture-with-2-Drawers-47-2-In-Large-Wooden-Indoor-Dog-Cage-Table-with-Divider-Lockable-Doors-for-Medium-Dogs-White_8cbf4413-b752-4551-92e9-2afd8f722ebb.7dc3d512cc7e33e54ed5fe9b6eaac541.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="New Arrival 3"></a>
+        <p class="price"><del>$300</del><strong>$80.54</strong></p>
+        <a href="place3.html"><button class="order">Oder now</button></a>
+
+      </div>
+      <div class="card">
+        <a href="place4.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Oneisall-Professional-Dog-Grooming-Clippers-Kit-2-Speed-Heavy-Duty-Cordless-Hair-Shears-Trimmers-Thick-Heavy-Coats-with-Metal-Blade-Dogs-Cats-Animals_7a6681c6-06d7-448a-894e-fc1600eaf013.d237ef495c7f90ab94025f5ec07b24a0.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 4"></a>
+        <p class="price"><del>$49.00</del><strong>$29.95</strong></p>
+        <a href="place4.html"><button class="order">Oder now</button></a>
+        
+
+      </div>
+      <div class="card">
+        <a href="place5.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Pettycare-30-Inch-Collapsible-Dog-Crate-Medium-Dogs-4-Door-Foldable-Soft-Dog-Kennel-Chew-Proof-Mesh-Windows-Indoor-Outdoor-Travel-Dog-Crate_131a5db1-d03b-48e3-9f49-0a65ea75f89d.b86a9dc11c0fa7789e838c204492dde2.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 5"></a>
+        <p class="price"><del>$80</del><strong>$60</strong></p>
+        <a href="place5.html"><button class="order">Oder now</button></a>
+
+      </div>
+    </div>
+
+    <div class="products">
+      <div class="card">
+        <a href="place6.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Sony-PS5-DualSense-Wireless-Controller-Cobalt-Blue_d73fd760-c42f-4d07-bbb8-1ce2764dee40.11a73b3ad1e7d2fda5eff3059351904e.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"></a>
+        <p class="price"><del>$70.40</del><strong>$40.50</strong></p>
+        <a href="place6.html"><button class="order">Oder now</button></a>
+
+      </div>
+      <div class="card">
+        <a href="place7.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Bose-QuietComfort-Wireless-Earbuds-Noise-Cancelling-Bluetooth-Headphones-Black_cce036ec-9156-4762-b491-cbffc90401a2.26b0464c3a4a1e7661e43c86f97a9828.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF " alt="New Arrival 2"></a>
+        <p class="price"><del>$150.50</del><strong>$86</strong></p>
+        <a href="place7.html"><button class="order">Oder now</button></a>
+
+      </div>
+      <div class="card">
+        <a href="place8.html" target="_blank"><img src="https://i5.walmartimages.com/seo/2025-Apple-11-inch-iPad-A16-Built-for-Apple-Intelligence-Wi-Fi-128GB-Silver_b330c294-bd31-4cfa-8696-2aaab09de3d6.047e2ef42438c9ee8228f2fdec51f998.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 3"></a>
+        <p class="price"><del>$320.99</del><strong>$290.78</strong></p>
+        <a href="place8.html"><button class="order">Oder now</button></a>
+
+      </div>
+      <div class="card">
+        <a href="place9.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Jay-Leno-s-Garage-Complete-Detailing-Bucket-Car-Wash-Kit-8-Piece-All-in-One-Car-Care-Set_880e3456-8afc-4e78-a6db-b0a4db83cc81.6fd393db4653bb084bd9a3f948a1f2d5.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF" alt="New Arrival 4"></a>
+        <p class="price"><del>$60.50</del><strong>$28.98</strong></p>
+        <a href="place9.html"><button class="order">Oder now</button></a>
+
+      </div>
+      <div class="card">
+        <a href="place10.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Quinlirra-Clearance-Microfiber-Car-Wash-Brush-Long-Handle-Car-Washing-Mop-Kit-Mitt-Sponge-Car-Cleaning-Supplies-Kit-Duster-RV-Washing-Car-Brush-Acces_c11409ed-6368-44dc-bf13-d936f65e1987.2df776b096cb8c1c7b0cf3ef173560c1.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 5"></a>
+        <p class="price"><del>$3.4</del><strong>$2.4</strong></p>
+        <a href="place10.html"><button class="order">Oder now</button></a>
+        
+      </div>
+    </div>
+  </section>
+  <div class="products">
+      <div class="card">
+        <a href="place11.html" target="_blank"><img src="https://i5.walmartimages.com/seo/WIRESTER-6-x-3-08-Vinyl-Decor-Decal-Car-Sticker-Window-Auto-Vehicle-Decoration-Australian-Shepherd_c3335842-7488-4657-b39a-69d5fa721880.c74efe0d743fdb60443c12d14ee79d23.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF" alt="New Arrival 1"></a>
+        <p class="price"><del>$10.55</del><strong>$8.64</strong></p>
+        <a href="place11.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place12.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Husky-Liners-by-RealTruck-Classic-Style-Floor-Mats_6337c63c-a12f-4485-9859-49fa0947a78a.533b56e737adaef78b5196f133a99b90.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 2"></a>
+        <p class="price"><del>$70</del><strong>$50.99</strong></p>
+        <a href="place12.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place13.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Bulova-C4835-The-Gears-in-Motion-Clock_98e0cbbf-e88f-4232-b428-5d51275eec2f.ab8c77c4c71ceaceaf86c16580f099f9.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 3"></a>
+        <p class="price"><del>$60.99</del><strong>$40</strong></p>
+        <a href="place13.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place14.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Beautiful-by-Drew-Barrymore-19-Gold-Metal-Table-Lamp-with-Glass-Petal-Shade_39f13387-10ea-4a66-9657-ef3107c47644.06fa227619ef62612b65e9595c6e1efd.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 4"></a>
+        <p class="price"><del>$40.00</del><strong>$24.99</strong></p>
+        <a href="place14.html"><button class="order">Oder now</button></a>
+
+      </div>
+      <div class="card">
+        <a href="place15.html" target="_blank"><img src="https://i5.walmartimages.com/seo/SIXHOME-Outdoor-Rug-8-x10-Waterproof-Reversible-Patio-Rug-Modern-Lightweight-Plastic-Straw-Indoor-Outdoor-Rug-RV-Camping-Deck-Balcony-Porch-Boho-Pati_a6faa4db-a8b6-4d19-8a2c-47057a968a02.30b2ed6aff58940f6adfbaf5cc0d582c.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFFalt=" alt="New Arrival 5"></a>
+        <p class="price"><del>$35.00</del><strong>$25.00</strong></p>
+        <a href="place15.html"><button class="order">Oder now</button></a>
+        
+      </div>
+    </div>
+  </section>
+
+    </div>
+  </section>
+
+  <section class="section" id="new-arrivals">
+    <h2>New Arrivals</h2>
+    <div class="products">
+      <div class="card">
+        <a href="place16.html" target="_blank"><img src="https://i5.walmartimages.com/seo/CAR-PASS-Microfiber-Steering-Wheel-Cover-Waterproof-Car-Floor-Mats-Leather-Universal-Combo-Fit-95-Truck-SUV-Cars-14-5-15inch-Sporty-Anti-Slip-Safety_c9729d14-2b8c-4b69-9b4b-44fd3d68ddfb.e670abe5e6ec750bdbd6b9e09f4ee443.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="New Arrival 1"></a>
+        <p class="price"><del>$40.00.85</del><strong>$27.67</strong></p>
+        <a href="place16.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place17.html" target="_blank"><img src="https://i5.walmartimages.com/seo/BEAUTYPEAK-Arched-Full-Length-Floor-Mirror-64-x21-1-Full-Body-Standing-Mirror-Black_023cfcf5-b8b4-45ba-a2e7-a4bcfa8f58a9.967e720555311887faf9dfd1fe2aa6bd.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 2"></a>
+        <p class="price"><del>$54.99</del><strong>$43.99</strong></p>
+        <a href="place17.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place18.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Better-Homes-Gardens-Springwood-Caning-Nightstand-Light-Honey-Finish_3c869cf2-5d58-4c54-b3e4-8c20b04f82a6.dc860448ec3b6c94a93906cabfb42625.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 3"></a>
+        <p class="price"><del>$120.00</del><strong>$77.90</strong></p>
+        <a href="place18.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place19.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Baxton-Studio-Davina-2-Drawer-Faux-Leather-Tufted-Nightstand-in-Black_79d44097-e0d6-4c02-95c7-e8c5faea8ec8.2627b86ea2ca4278d223167cb69b0bf2.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 4"></a>
+        <p class="price"><del>$130.00</del><strong>$100.12</strong></p>
+        <a href="place19.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place20.html" target="_blank"><img src="https://i5.walmartimages.com/seo/LE-TAUCI-7-3-5-4-Ceramic-Crocks-for-Kitchen-Cooking-Organizer-Plant-Pots-Set-of-2-Utensil-Holder_880ec611-3b07-4674-b4e4-a4bb34f036c0.7ca885384741f334e6423a00afae21f1.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 5"></a>
+        <p class="price"><del>$35.99</del><strong>$19.99</strong></p>
+        <a href="place20.html"><button class="order">Oder now</button></a>
+        
+      </div>
+    </div>
+  </section>
+  <div class="products">
+      <div class="card">
+        <a href="place21.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Black-Silicone-Cooking-Utensils-Set-446-F-Heat-Resistant-Kitchen-Utensils-Turner-Tongs-Spatula-Spoon-Brush-Whisk-Kitchen-Utensil-Gadgets-Tools-Set-No_cb35c4c3-3a99-445b-ab22-c44b37e86cba.ec7cf0aba5bcfb2ac197dd95422d118e.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 1"></a>
+        <p class="price"><del>$30.22</del><strong>$16.90</strong></p>
+        <a href="place21.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place22.html" target="_blank"><img src="https://i5.walmartimages.com/asr/13023dde-ef8e-4d7d-81cf-9a10db04870b.56dd86d140afee41cccf51dbf3ea0e09.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 2"></a>
+        <p class="price"><del>$15.oo</del><strong>$9.99</strong></p>
+        <a href="place22.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place23.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Keyohome-Car-Seat-Snack-Tray-with-Cup-Holder-Silicone-Toddler-Car-Seat-Travel-Tray-Quick-Attach-Car-Seat-Travel-Holder-Plate_0fb74a3e-a7b9-48de-9ec2-266564240a76.19e6052ccd1b4558bc5cee76e4c60e40.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 3"></a>
+        <p class="price"><del>$10.00</del><strong>$8.99</strong></p>
+        <a href="place23.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place25.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Alden-Design-Faux-Leather-Modern-Accent-Chair-with-Metal-Frame-for-Livingroom-Light-Brown_35787977-195a-4783-9330-ca29f206de22.569a5dd598314a59c3492a4c43bc20d2.png?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="New Arrival 4"></a>
+        <p class="price"><del>$90.80</del><strong>$62.90</strong></p>
+        <a href="place25.html"><button class="order">Oder now</button></a>
+        
+      </div>
+      <div class="card">
+        <a href="place24.html" target="_blank"><img src="https://i5.walmartimages.com/seo/Armor-All-4-Piece-Black-Trim-to-Fit-All-Weather-Floor-Mats-Vehicle-Make-Universal_ef8f788b-ed8c-4ed1-aca0-e0d3b80f3914.2f8e0cf2925273432cc3ecd0440420f8.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="New Arrival 5"></a>
+        <p class="price"><del>$43.89</del><strong>$33.89</strong></p>
+        <a href="place24.html"><button class="order">Oder now</button></a>
+        
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  <script>
+    const buttons = document.querySelectorAll('.add-to-cart');
+    const cartMessage = document.getElementById('cart-message');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        cartMessage.style.display = 'block';
+        setTimeout(() => {
+          cartMessage.style.display = 'none';
+        }, 2000);
+      });
+    });
+
+     const cart = [];
+
+  function addToCart(button) {
+    const productDiv = button.parentElement;
+    const id = productDiv.getAttribute('data-id');
+    const name = productDiv.getAttribute('data-name');
+    const price = parseFloat(productDiv.getAttribute('data-price'));
+
+    // Check if item already exists in cart
+    const existingItem = cart.find(item => item.id === id);
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({ id, name, price, quantity: 1 });
+    }
+
+    updateCartDisplay();
+  }
+
+  function updateCartDisplay() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotalContainer = document.getElementById('cart-total');
+    
+    cartItemsContainer.innerHTML = '';
+    let total = 0;
+
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = ${item.name} x ${item.quantity} = $${item.price * item.quantity};
+      cartItemsContainer.appendChild(li);
+      total += item.price * item.quantity;
+    });
+
+    cartTotalContainer.textContent = total.toFixed(2);
+  }
+
+  </script>
+  <footer>
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h4>Shop With Us</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">All Products</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Best Sellers</a></li>
+        <li><a href="#">Gift Cards</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Why Shop Here</h4>
+      <ul>
+        <li>✅ Free Shipping on All Orders</li>
+        <li>🛡️ Secure Checkout</li>
+        <li>📦 Easy Returns</li>
+        <li>🕒 24/7 Support</li>
+      </ul>
+    </div>
+
+    <div class="footer-section newsletter">
+      <h4>Stay in the Loop</h4>
+      <p>Subscribe to get updates & exclusive deals:</p>
+      <form onsubmit="subscribeNewsletter(event)">
+        <input type="email" id="email" placeholder="Your email..." required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscribe-msg" style="margin-top:10px;"></p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Connect With Us</h4>
+      <p>Phone: 1-800-123-4567</p>
+      <p>Email: support@smartStore™.com</p>
+      <div class="social-icons">
+        <a href="#">Instagram</a> |
+        <a href="#">Facebook</a> |
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 smartStore™. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a>
+  </div>
+</footer>
+
+<script>
+  function subscribeNewsletter(event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    document.getElementById('subscribe-msg').textContent = `Thanks for subscribing, ${email}! 🎉`;
+    document.getElementById('email').value = '';
+  }
+
+</script>
+
+</body>
+</html>
+</body>
+</html>

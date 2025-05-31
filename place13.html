@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- Left: Images -->
+    <div class="md:col-span-2 grid grid-cols-2 md:grid-cols-5 gap-4">
+      <img src="https://i5.walmartimages.com/seo/Bulova-C4835-The-Gears-in-Motion-Clock_98e0cbbf-e88f-4232-b428-5d51275eec2f.ab8c77c4c71ceaceaf86c16580f099f9.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="Image 1" class="rounded-xl shadow" />
+      <img src="https://i5.walmartimages.com/asr/c9b84ba7-b668-4776-af4d-4a0674fae78d.298e72248da40e7f9a422fc6edbb43e7.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="Image 2" class="rounded-xl shadow" />
+      <img src="https://i5.walmartimages.com/asr/029809ab-8d58-4227-bdd4-4df9b3f89857.c166f6d8a00d653c825037f7bc935f2a.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="Image 3" class="rounded-xl shadow" />
+      <img src="https://i5.walmartimages.com/asr/c9b84ba7-b668-4776-af4d-4a0674fae78d.298e72248da40e7f9a422fc6edbb43e7.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="Image 4" class="rounded-xl shadow" />
+      <img src="https://i5.walmartimages.com/seo/Bulova-C4835-The-Gears-in-Motion-Clock_98e0cbbf-e88f-4232-b428-5d51275eec2f.ab8c77c4c71ceaceaf86c16580f099f9.jpeg?odnHeight=117&odnWidth=117&odnBg=FFFFFF" alt="Image 5" class="rounded-xl shadow" />
+    </div>
+
+    <!-- Right: Slip -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col justify-between h-full">
+      <div>
+        <h2 class="text-xl font-bold mb-2">Price: <span class="text-green-600">$40.00</span></h2>
+        <p class="text-gray-600 mb-4">Delivery: <strong>Free</strong></p>
+      </div>
+
+      <div>
+        <!-- Order Now button opens delivery.html -->
+        <a href="delivary.html">
+          <button class="bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition duration-300 w-full">
+            Order Now
+          </button>
+        </a>
+
+        <!-- Instructions -->
+        <div class="mt-6 bg-gray-100 p-4 rounded-xl text-sm text-gray-700">
+          <h3 class="font-semibold mb-2">How to place your order:</h3>
+          <ol class="list-decimal pl-5 space-y-1">
+            <li>Press the <strong>Order Now</strong> button.</li>
+            <li>Fill in the delivery form on the next page.</li>
+            <li>Press the <strong>Submit Order</strong> button.</li>
+            <li>Note:Make a deposit of $5  your order.</li>
+            <li>Complete payment on delivery.</li>
+
+
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
